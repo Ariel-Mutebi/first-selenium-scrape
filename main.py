@@ -7,7 +7,7 @@ baby_driver.get("https://www.python.org/")
 time_elements = baby_driver.find_elements(By.CSS_SELECTOR, ".event-widget time")
 event_elements = baby_driver.find_elements(By.CSS_SELECTOR, ".event-widget .menu a")
 
-if len(time_elements) is not len(event_elements): # Early return pattern
+if len(time_elements) != len(event_elements): # Early return pattern
     raise Exception("The number or time elements do not correspond with that of event elements.")
 
 event_dictionary = {}
